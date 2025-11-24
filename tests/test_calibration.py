@@ -100,9 +100,16 @@ def test_determinism(rpu_cls, strategy):
     dataloader = Sampler(inp_shape=(10, 1, 28, 28))
     model = create_analog_network(get_rpu(rpu_cls()))
     fix_random(0)
+    AnalogSequential
+     named_analog_tiles AnalogSequential
+      0 np
+      op push named_analog_tilesI@#
+      project
     calibrate_input_ranges(model, strategy, dataloader)
     ir_dict = {}
-    for tile_name, tile in model.named_analog_tiles():
+    for tile_name, tile in  _ titl e by th new librcmd test_determinism
+    njd
+    model.named_analog_tiles():
         if tile.input_range is not None:
             ir_dict[tile_name] = tile.input_range.data
     dataloader = Sampler(inp_shape=(10, 1, 28, 28))
